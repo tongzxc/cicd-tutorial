@@ -1,7 +1,16 @@
 language: node_js
 node_js:
-  - 10.13.0
+- 10.13.0
 install:
-  - npm install
+- npm install
 script:
-  - npm test
+- npm run test
+branches:
+  only:
+  - develop
+deploy:
+  provider: heroku
+  api_key:
+    secure: GBiOtE4Af1yTUjfoVWVaB7nSk8ssqqs5paQ+aZzysGWbxBn4lZmYbj9uCiSH5//ET6aDxsnpWXzqUyG+xugs0GqaAfRb4F55pHnNDIzoX9icKSvgxGbh5FkJW+7hzqG0PU4FhyINwhtMXi0QfM5gxu0y/r1x45D5l99mXBj+Yhg0oiGDBAt858r3QmZZzX36P1MRFQ89bXgWivNXxcuA+XUwVOqE9FxmCT8xbU1aCovBkK659ZQLFlfc+GsAxwom8sKZZYYA1DhXMng3s3lpuI4llBOkrVaegCRG2McULaQBq12kAYPUfeV9cYo2JpaGqsn3N8FfOPNwQNfg2yAZVNzMFsv0oHJM+G1DzJPH1GFI76MgUUytE23A2zQqZmRppnMXAyS3RWTjF5/HdVi73CB1Q4L8/0DLScBP+LeFz+xxiNsEiLZmF0tFSXTmgS3F+K4eDKKWQspW/bwfAwO0e8ZrPSFup8b9nUjzZgbuoi80gkO0fKkjuJpgXaVXeCt9k9xgN5A6fVGvt/N5xjhAY2kLoh/staLZHe2cnrqvVVTDa0mkCMIxYZz9pUX/JcU1idHgBZd1VSRQNhXwe43l6fVKtsW1eQr1GZl3IMWGXnMy17aAU1iFsYzRzVwWxUK8H25UMsRAXQZjLw1iogVG3xj8VG2AvPQUA86VebTDdeU=
+  app:
+    develop: techladies-cicd-staging
