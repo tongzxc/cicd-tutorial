@@ -3,5 +3,5 @@ node_js:
   - 10.13.0
 install:
   - npm install
- script:
+script:
   - npm test
